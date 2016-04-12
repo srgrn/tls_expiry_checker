@@ -32,9 +32,9 @@ func main() {
 		os.Exit(code)
 	}()
 	flag.Parse()
-	fullUrl := *url + ":443"
+	fullURL := *url + ":443"
 	//fmt.Println(fullUrl)
-	conn, _ := tls.Dial("tcp", fullUrl, &tls.Config{})
+	conn, _ := tls.Dial("tcp", fullURL, &tls.Config{})
 
 	cert := conn.ConnectionState().PeerCertificates[0]
 
